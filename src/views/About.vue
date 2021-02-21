@@ -29,7 +29,7 @@
           <div class="col">
             <div class="card mb-4 shadow-sm">
               <div class="card-header">
-                <h4 class="my-0 fw-normal">{{ product1.name }}</h4>
+                <h4 class="my-0 fw-normal">{{ data1.name }}</h4>
               </div>
               <div class="card-body">
                 <img src="https://cdn.sogoodweb.com/Preview/106/images/te0106-004.png" />
@@ -37,13 +37,13 @@
                   1325 THB
                 </ul>
                 <div id="example-1">
-                  <b-button variant="outline-warning" v-on:click="product1.amount += 1"
+                  <b-button variant="outline-warning" v-on:click="data1.amount += 1"
                     >Add to basket</b-button
                   >&nbsp;
-                  <b-button variant="outline-danger" v-on:click="product1.amount -= 1"
+                  <b-button variant="outline-danger" v-on:click="data1.amount -= 1"
                     >Take out basket</b-button
                   >
-                  <p>จำนวน {{ product1.amount }} ถุง</p>
+                  <p>จำนวน {{ data1.amount }} ถุง</p>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@
           All prices
           {{
             sum +
-            product1.amount * product1.price +
+            data1.amount * data1.price +
             product2.amount * product2.price +
             product3.amount * product3.price +
             product4.amount * product4.price +
@@ -201,7 +201,7 @@ export default {
   name: "App",
   data() {
     return {
-      product1: {
+      data1: {
         name: "SENSEO COFFEE",
         price: 1325,
         amount: 0,
